@@ -20,3 +20,13 @@ class BankAccount {
     balance -= amount;
   }
 }
+
+void main() {
+  BankAccount account = BankAccount(10000);
+  try {
+    account.withdraw(2000);
+  } on HandlException catch (e) {
+    print((e.errorMessage()));
+  }
+  print("Remaining balance: ${account.balance}");
+}
