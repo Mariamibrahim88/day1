@@ -1,4 +1,4 @@
-class HandlException extends Exception {
+class HandlException implements Exception {
   String errorMessage() {
     return "not enough balance to withdraw";
   }
